@@ -1500,8 +1500,6 @@ textarea.form-input::-webkit-resizer { display: none; }
     margin-bottom: 0;
   }
 
-  .modal-avatar-box img { width: 50px; filter: brightness(0) saturate(100%) invert(79%) sepia(82%) saturate(336%) hue-rotate(336deg) brightness(103%) contrast(101%);}
-
   .modal-img-wrapper > img {
     display: block;
     flex-grow: 1;
@@ -1631,6 +1629,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   .modal-avatar-box img { width: 50px; }
 
 
+  .modal-avatar-box img { width: 50px; filter: brightness(0) saturate(100%) invert(79%) sepia(82%) saturate(336%) hue-rotate(336deg) brightness(103%) contrast(101%);}
 
   /**
    * PORTFOLIO
