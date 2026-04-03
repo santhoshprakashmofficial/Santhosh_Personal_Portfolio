@@ -174,3 +174,27 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+
+// ================================
+// SIMPLE TOAST ON SUBMIT
+// ================================
+
+form.addEventListener("submit", function () {
+
+  // Only show if form is valid
+  if (form.checkValidity()) {
+
+    const toast = document.getElementById("toast-success");
+
+    setTimeout(() => {
+      toast.classList.add("show");
+    }, 200);
+
+    setTimeout(() => {
+      toast.classList.remove("show");
+    }, 3000);
+
+  }
+
+});
