@@ -720,10 +720,10 @@ main {
 
 .modal-avatar-box {
   /* background: var(--bg-gradient-onyx); */
-  width: max-content;
+  width: 50px;
   border-radius: 14px;
   margin-bottom: 15px;
-  box-shadow: var(--shadow-2);
+  /* box-shadow: var(--shadow-2); */
   filter: brightness(0) saturate(100%) invert(79%) sepia(82%) saturate(336%) hue-rotate(336deg) brightness(103%) contrast(101%);
 }
 
@@ -1500,7 +1500,7 @@ textarea.form-input::-webkit-resizer { display: none; }
     margin-bottom: 0;
   }
 
-  .modal-avatar-box img { width: 65px; filter: brightness(0) saturate(100%) invert(79%) sepia(82%) saturate(336%) hue-rotate(336deg) brightness(103%) contrast(101%);}
+  .modal-avatar-box img { width: 50px; filter: brightness(0) saturate(100%) invert(79%) sepia(82%) saturate(336%) hue-rotate(336deg) brightness(103%) contrast(101%);}
 
   .modal-img-wrapper > img {
     display: block;
