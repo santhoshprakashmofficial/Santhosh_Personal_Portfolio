@@ -1626,9 +1626,6 @@ textarea.form-input::-webkit-resizer { display: none; }
     max-width: 680px;
   }
 
-  .modal-avatar-box img { width: 50px; }
-
-
   .modal-avatar-box img { width: 50px; filter: brightness(0) saturate(100%) invert(79%) sepia(82%) saturate(336%) hue-rotate(336deg) brightness(103%) contrast(101%);}
 
   /**
