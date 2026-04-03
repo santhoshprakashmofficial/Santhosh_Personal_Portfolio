@@ -1916,3 +1916,42 @@ textarea.form-input::-webkit-resizer { display: none; }
   .timeline-text { max-width: 700px; }
 
 }
+
+
+.toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: var(--border-gradient-onyx);
+  color: var(--white-2);
+  padding: 14px 18px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: var(--shadow-3);
+  transform: translateX(120%);
+  opacity: 0;
+  transition: all 0.4s ease;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+.toast::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: var(--bg-gradient-jet);
+  border-radius: inherit;
+  z-index: -1;
+}
+
+.toast ion-icon {
+  color: var(--orange-yellow-crayola);
+  font-size: 22px;
+}
+
+.toast.show {
+  transform: translateX(0);
+  opacity: 1;
+}
