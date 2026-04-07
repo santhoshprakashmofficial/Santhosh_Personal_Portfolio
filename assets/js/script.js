@@ -198,3 +198,18 @@ form.addEventListener("submit", function () {
   }
 
 });
+
+let lastScroll = 0;
+const btn = document.querySelector('.resume-float');
+
+window.addEventListener('scroll', () => {
+  let current = window.scrollY;
+
+  if (current > lastScroll) {
+    btn.style.transform = "translateY(-50%) translateX(115px)";
+  } else {
+    btn.style.transform = "translateY(-50%) translateX(0)";
+  }
+
+  lastScroll = current;
+});
