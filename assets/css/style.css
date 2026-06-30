@@ -425,9 +425,7 @@ main {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 15px;
-  padding-bottom: 4px;
-  padding-left: 7px;
+  gap: 40px;
 }
 
 .social-item .social-link {
@@ -993,7 +991,7 @@ h4.h4.timeline-item-percent a{ color: var(--light-gray); text-decoration: underl
 .project-img {
   position: relative;
   width: 100%;
-  height: 200px;
+  height: 200px !important;
   border-radius: 16px;
   overflow: hidden;
   margin-bottom: 15px;
@@ -1404,6 +1402,66 @@ textarea.form-input::-webkit-resizer { display: none; }
     width: calc(100% - 64px);
   }
 
+  .avatar-box {
+    position: relative;
+    border-radius: 30px;
+    padding: 4px;
+    background: linear-gradient(135deg, #ffdb70, #ff8c00, #ffdb70);
+    animation: avatarGlow 3s linear infinite, avatarFloat 4s ease-in-out infinite;
+    overflow: hidden;
+  }
+
+  .avatar-box::before {
+    content: "";
+    position: absolute;
+    inset: -3px;
+    background: linear-gradient(135deg, #ffdb70, #ff8c00, #ffffff, #ffdb70);
+    border-radius: 34px;
+    z-index: -1;
+    filter: blur(10px);
+    opacity: 0.7;
+    animation: avatarRotate 4s linear infinite;
+  }
+
+  .avatar-box img {
+    width: 120px;
+    height: 120px;
+    display: block;
+    object-fit: cover;
+    border-radius: 26px;
+    transition: transform 0.4s ease;
+  }
+
+  .avatar-box:hover img {
+    transform: scale(1.08);
+  }
+
+  @keyframes avatarFloat {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+
+  @keyframes avatarGlow {
+    0%, 100% {
+      box-shadow: 0 0 15px rgba(255, 219, 112, 0.35);
+    }
+    50% {
+      box-shadow: 0 0 30px rgba(255, 140, 0, 0.65);
+    }
+  }
+
+  @keyframes avatarRotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
 
 
   /**
@@ -1648,6 +1706,7 @@ textarea.form-input::-webkit-resizer { display: none; }
     color: var(--light-gray);
     font-size: var(--fs-5);
     transition: var(--transition-1);
+    text-transform: capitalize;
   }
 
   .filter-item button:hover { color: var(--light-gray-70); }
