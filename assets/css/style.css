@@ -1402,67 +1402,6 @@ textarea.form-input::-webkit-resizer { display: none; }
     width: calc(100% - 64px);
   }
 
-  .avatar-box {
-    position: relative;
-    border-radius: 30px;
-    padding: 4px;
-    background: linear-gradient(135deg, #ffdb70, #ff8c00, #ffdb70);
-    animation: avatarGlow 3s linear infinite, avatarFloat 4s ease-in-out infinite;
-    overflow: hidden;
-  }
-
-  .avatar-box::before {
-    content: "";
-    position: absolute;
-    inset: -3px;
-    background: linear-gradient(135deg, #ffdb70, #ff8c00, #ffffff, #ffdb70);
-    border-radius: 34px;
-    z-index: -1;
-    filter: blur(10px);
-    opacity: 0.7;
-    animation: avatarRotate 4s linear infinite;
-  }
-
-  .avatar-box img {
-    width: 120px;
-    height: 120px;
-    display: block;
-    object-fit: cover;
-    border-radius: 26px;
-    transition: transform 0.4s ease;
-  }
-
-  .avatar-box:hover img {
-    transform: scale(1.08);
-  }
-
-  @keyframes avatarFloat {
-    0%, 100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-8px);
-    }
-  }
-
-  @keyframes avatarGlow {
-    0%, 100% {
-      box-shadow: 0 0 15px rgba(255, 219, 112, 0.35);
-    }
-    50% {
-      box-shadow: 0 0 30px rgba(255, 140, 0, 0.65);
-    }
-  }
-
-  @keyframes avatarRotate {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-
 
   /**
    * #NAVBAR
@@ -2108,3 +2047,78 @@ textarea.form-input::-webkit-resizer { display: none; }
   opacity: 1;
   animation: shine 1.2s linear;
 }
+
+.avatar-box {
+    position: relative;
+    border-radius: 30px;
+    padding: 4px;
+    background: linear-gradient(135deg, #ffdb70, #ff8c00, #ffdb70);
+    animation: avatarGlow 3s linear infinite, avatarFloat 4s ease-in-out infinite;
+    overflow: hidden;
+  }
+
+  .avatar-box::before {
+    content: "";
+    position: absolute;
+    inset: -3px;
+    background: linear-gradient(135deg, #ffdb70, #ff8c00, #ffffff, #ffdb70);
+    border-radius: 34px;
+    z-index: -1;
+    filter: blur(10px);
+    opacity: 0.7;
+    animation: avatarRotate 4s linear infinite;
+  }
+
+  .avatar-box img {
+    width: 120px;
+    height: 120px;
+    display: block;
+    object-fit: cover;
+    border-radius: 26px;
+    transition: transform 0.4s ease;
+  }
+
+  .avatar-box:hover img {
+    transform: scale(1.08);
+  }
+
+  @keyframes avatarFloat {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+
+  @keyframes avatarGlow {
+    0%, 100% {
+      box-shadow: 0 0 15px rgba(255, 219, 112, 0.35);
+    }
+    50% {
+      box-shadow: 0 0 30px rgba(255, 140, 0, 0.65);
+    }
+  }
+
+  @keyframes avatarRotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @media screen and (max-width: 580px) {
+    .avatar-box {
+      width: 90px;
+      height: 90px;
+    }
+
+    .avatar-box img {
+      width: 80px;
+      height: 90px;
+    }
+
+    .navbar-link{ font-size: 14px; padding: 20px 14px; }
+  }
