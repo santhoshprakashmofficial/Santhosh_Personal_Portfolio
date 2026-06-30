@@ -2146,3 +2146,10 @@ textarea.form-input::-webkit-resizer { display: none; }
       transition: all 0.35s ease; 
     }
   }
+
+  p.project-password {
+    font-size: 12px;
+    margin-left: 10px;
+    color: #fff;
+    margin-top: 10px;
+  }
